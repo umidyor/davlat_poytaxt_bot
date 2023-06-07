@@ -1,11 +1,11 @@
 from aiogram import Bot, Dispatcher, executor, types
 
-api_token = '######'
+api_token = '5627482504:AAFcIj2sMC6MV1KfxluByKPDxoEmAr1fuf0'
 bot = Bot(token=api_token)
 dp = Dispatcher(bot)
 
 
-@dp.message_handler(commands='/start')
+@dp.message_handler(commands='start')
 async def start(message: types.Message):
     salom = "Istagan davlatingizni yozing, poytaxtini aytaman!"
     await message.answer(f"Salom hurmatli {message.from_user.first_name}👋! {salom}")
@@ -231,6 +231,7 @@ async def test(message: types.Message):
         "Tuvalu": "Funafuti",
         "Solomon Orollari": "Xoniara",
         "Kiribati": "Janubiy Tarava (Bayriki)",
+        "Amerika":"Vashington",
     }
 
     text = message.text.title()
